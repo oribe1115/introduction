@@ -13,10 +13,20 @@ const startCountUp = () => {
     }
     
 }
+
 const countUp = () => {
-    const timeElement = document.querySelector('#time')
+    
     time++
-    timeElement.innerText = '時間：' + time
+    showTime()
 
 }
 
+const reset = () => {
+    time = 0
+    showTime()
+}
+
+const showTime = () => {
+    const timeElement = document.querySelector('#time')
+    timeElement.innerText = '時間：' + time
+}
