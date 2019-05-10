@@ -28,5 +28,21 @@ const reset = () => {
 
 const showTime = () => {
     const timeElement = document.querySelector('#time')
-    timeElement.innerText = '時間：' + time
+
+    const minutes = Math.floor(time / 60)
+    const seconds = time % 60
+
+    let outputMinues = String(minutes)
+    let outputSeconds = String(seconds)
+
+    if(minutes < 10){
+        outputMinues = "0" + outputMinues
+    }
+    if(seconds < 10){
+        outputSeconds = "0" + outputSeconds
+    }
+
+
+
+    timeElement.innerText = outputMinues + "：" + outputSeconds
 }
