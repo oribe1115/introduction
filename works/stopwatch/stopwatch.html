@@ -2,13 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="./stopwatch.css">
   <script src="./stopwatch.js"></script>
   <title>ストップウォッチ</title>
 </head>
 <body>
   <h1>ストップウォッチ</h1>
-  <div id="time">00：00</div>
-  <button id="startButton" onclick="startCountUp()">START</button>
-  <button id="resetButton" onclick="reset()">RESET</button>
+  <div class="stopwatch">
+    <div class="timer">
+        <div id="time">00：00</div>
+    </div>
+      
+    <button id="startButton" onclick="startCountUp()">START</button>
+    <button id="resetButton" onclick="reset()">RESET</button>
+  </div>
+  
 </body>
 </html>
